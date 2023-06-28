@@ -67,6 +67,19 @@ fecharMenu.addEventListener('click', () => {
 })
 
 
+const links = document.querySelectorAll(`.link`);
+
+links.forEach((link) => {
+    link.addEventListener('click', () => {
+        MobileContainer.classList.remove('abrirMenuMobile');
+        MobileContainer.classList.add('fecharMenuMobile');
+
+        setTimeout(() => {
+            MobileContainer.style.display = 'none';
+        }, 300)
+    })
+})
+
 
 const img = document.querySelectorAll('img');
 
