@@ -344,6 +344,8 @@ header .login:hover {
   max-width: 75em;
   margin: 0 auto;
   display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
   justify-content: space-between;
 }
 .containerPopularVeiculos .botao-carrosel button {
