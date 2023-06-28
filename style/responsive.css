@@ -1,0 +1,31 @@
+@media screen and (max-width:663px) {
+    .Inicioh1 {
+        font-size: 2.5em !important;
+    }
+
+    .homeImg {
+        width: 500px !important;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    .menuMobile {
+        display: block !important;
+    }
+}
+
+
+@media screen and (max-width:503px) {
+    .homeImg {
+        width: 400px !important;
+    }
+}
+
+
+@media screen and (max-width:401px) {
+    .homeImg {
+        width: 350px !important;
+    }
+}

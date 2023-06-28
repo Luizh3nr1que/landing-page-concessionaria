@@ -1,0 +1,30 @@
+@mixin flex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin flex-wrap
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+@mixin animacaoLogin
+    @keyframes slide
+        from
+            margin-top: -100%
+        to
+            margin-top: 0px
+
+@mixin animacaoAbrirMenuMobile
+    @keyframes slideAbrirMenu
+        from
+            margin-left: -50%
+        to
+            margin-left: 0px
+
+@mixin animacaoFecharMenuMobile
+    @keyframes slideFecharMenu
+        from
+            margin-left: 0px
+        to
+            margin-left: -50%

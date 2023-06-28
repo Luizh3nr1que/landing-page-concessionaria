@@ -1,0 +1,540 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  z-index: 99;
+  background-color: #ffffff;
+}
+header h1 {
+  color: #1139ba;
+  font-weight: 500;
+}
+header span {
+  color: #f9a600;
+}
+header nav {
+  display: flex;
+  gap: 30px;
+}
+header nav a {
+  text-decoration: none;
+  color: #1139ba;
+  font-size: 18px;
+}
+header nav a:hover {
+  color: #f9a600;
+}
+header .menuMobile {
+  display: none;
+  font-size: 30px;
+  color: #1139ba;
+}
+header .login {
+  width: 120px;
+  height: 40px;
+  border: none;
+  background: #1139ba;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .login:hover {
+  transition: 0.3s;
+  background-color: #f9a600;
+}
+
+.MobileContainer {
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 35%;
+  z-index: 999;
+  background-color: #fff;
+}
+.MobileContainer .fecharMenu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 35px;
+  color: #1139ba;
+}
+.MobileContainer .menuMobileConteudo {
+  margin-top: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 35px;
+}
+.MobileContainer .menuMobileConteudo a {
+  color: #1139ba;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.abrirMenuMobile {
+  animation: slideAbrirMenu 0.3s linear forwards;
+}
+@keyframes slideAbrirMenu {
+  from {
+    margin-left: -50%;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+.fecharMenuMobile {
+  animation: slideFecharMenu 0.3s linear forwards;
+}
+@keyframes slideFecharMenu {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: -50%;
+  }
+}
+
+.inicioContainer {
+  width: 100%;
+}
+.inicioContainer .inicioConteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 130px auto;
+  text-align: center;
+}
+.inicioContainer .inicioConteudo h1 {
+  font-size: 6rem;
+  color: #f9a600;
+}
+.inicioContainer img {
+  width: 80%;
+}
+
+.loginContainer {
+  animation: slide 0.4s linear forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  pointer-events: auto;
+  backdrop-filter: blur(8px);
+}
+@keyframes slide {
+  from {
+    margin-top: -100%;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+.loginContainer .loginConteudo {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  opacity: 1;
+  position: absolute;
+  border-radius: 20px;
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  padding: 30px;
+  text-align: center;
+}
+.loginContainer .loginConteudo .headerLogin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.loginContainer .loginConteudo .headerLogin h1 {
+  font-size: 30px;
+}
+.loginContainer .loginConteudo .headerLogin span {
+  font-size: 25px;
+  cursor: pointer;
+}
+.loginContainer .loginConteudo .headerLogin span:hover {
+  color: #fb4040;
+}
+.loginContainer .loginConteudo input {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 0px 0px 0px 10px;
+  outline: none;
+  border: none;
+  background-color: #f0f0f0;
+}
+.loginContainer .loginConteudo #email {
+  margin-bottom: 20px;
+}
+.loginContainer .loginConteudo p {
+  margin: 20px;
+}
+.loginContainer .loginConteudo p a {
+  color: #f9a600;
+}
+.loginContainer .loginConteudo .loginBtn {
+  background-color: #1139ba;
+  height: 40px;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.loginContainer .loginConteudo .loginBtn:hover {
+  background-color: #0b2888;
+}
+
+.galleryContainer {
+  width: 100%;
+  text-align: center;
+}
+.galleryContainer h1 {
+  color: #f9a600;
+  font-size: 3.8rem;
+}
+.galleryContainer .galleryConteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+.galleryContainer .galleryConteudo .cards {
+  width: 250px;
+  height: 200px;
+  background-color: #f9a600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.galleryContainer .galleryConteudo .cards img {
+  width: 230px;
+  transform: rotate(-20deg);
+  transition: 0.3s;
+  border-radius: 30px;
+}
+.galleryContainer .galleryConteudo .cards img:hover {
+  transition: 0.3s;
+  transform: rotate(0);
+}
+.galleryContainer .galleryConteudo .cards .gallery3 {
+  width: 200px;
+}
+
+.containerPopularVeiculos {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+.containerPopularVeiculos h1 {
+  color: #f9a600;
+  font-size: 3.8rem;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  overflow-x: hidden;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos {
+  width: 25em;
+  height: 25em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2666666667);
+  transition: 0.4s;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos:hover {
+  transition: 0.4s;
+  transform: translateY(-10px);
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos img {
+  width: 350px;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos h2 {
+  font-size: 2em;
+  color: #1139ba;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos .price {
+  font-size: 17px;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos .priceContainer {
+  font-size: 1.5em;
+  color: #f9a600;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos .descricao {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos .descricao .bolinha {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  content: "";
+  display: inline-block;
+  background-color: #f9a600;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos .compraVeiculo {
+  width: 210px;
+  height: 40px;
+  border: none;
+  padding: 5px;
+  color: #fff;
+  background-color: #1139ba;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.containerPopularVeiculos .conteudoPopularVeiculos .cardsPopularVeiculos .compraVeiculo:hover {
+  background-color: #0b2888;
+}
+.containerPopularVeiculos .botao-carrosel {
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.containerPopularVeiculos .botao-carrosel button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.containerPopularVeiculos .botao-carrosel button:hover {
+  background-color: #0b2888;
+}
+
+.outrosServicosContainer {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.outrosServicosContainer h1 {
+  color: #f9a600;
+  font-size: 3.8rem;
+}
+.outrosServicosContainer .outrosServicosConteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+.outrosServicosContainer .outrosServicosConteudo .cardsServicos {
+  width: 330px;
+  height: 280px;
+  background-color: #1139ba;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  transition: 0.3s;
+}
+.outrosServicosContainer .outrosServicosConteudo .cardsServicos:hover {
+  transition: 0.3s;
+  background-color: #767676;
+}
+.outrosServicosContainer .outrosServicosConteudo .cardsServicos button {
+  background: #f9a600;
+  border: none;
+  height: 40px;
+  width: 200px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 19px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contatContainer {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.contatContainer h1 {
+  color: #f9a600;
+  font-size: 3.8rem;
+}
+.contatContainer .contatConteudo {
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f9a600;
+  padding: 20px;
+}
+.contatContainer .contatConteudo .maps {
+  border-right: 1px solid #a9a9a9;
+  width: 580px;
+  height: 450px;
+}
+.contatContainer .contatConteudo .form {
+  width: 580px;
+  height: 450px;
+  padding: 30px;
+}
+.contatContainer .contatConteudo .form h2 {
+  margin-bottom: 20px;
+}
+.contatContainer .contatConteudo .form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contatContainer .contatConteudo .form form input {
+  padding: 2px 2px 2px 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.contatContainer .contatConteudo .form form textarea {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 15px 5px 2px 10px;
+  width: 100%;
+  height: 150px;
+}
+.contatContainer .contatConteudo .form form button {
+  width: 40%;
+  background-color: #1139ba;
+  color: #fff;
+  margin-top: 10px;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.contatContainer .contatConteudo .form form button:hover {
+  background-color: #0b2888;
+}
+
+.fundoLoad {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 1900;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.loader {
+  display: flex;
+  width: 220px;
+  height: 8px;
+  border-radius: 40px;
+  background-color: #f5f5f5;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.fundoLoad p {
+  position: absolute;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  color: white;
+  letter-spacing: 3px;
+  color: #000;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 150%;
+  height: 100%;
+  background-color: #1139ba;
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: load 1.2s infinite;
+}
+
+@keyframes load {
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

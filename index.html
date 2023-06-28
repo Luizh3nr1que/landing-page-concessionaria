@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!--css -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <!--fim css -->
+
+    <!-- Biblioteca normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fim Biblioteca normalize -->
+
+    <link rel="shortcut icon" href="icon/favicon-32x32.png" type="image/x-icon">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
+    <!-- fim font -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>Luiz Henrique | Concessionária de Carros</title>
+</head>
+
+<body>
+
+    <!-- load -->
+    <div class="fundoLoad">
+        <p>Carregando..</p>
+        <div class="loader">
+        </div>
+    </div>
+    <!-- fim do load -->
+
+    <header>
+        <ion-icon class="menuMobile" name="menu"></ion-icon>
+
+        <h1><span>Buy</span>Cars</h1>
+
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#veiculos">Veiculos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button class="login">Login</button>
+    </header>
+
+
+    <section class="MobileContainer">
+
+        <ion-icon class="fecharMenu" name="chevron-back"></ion-icon>
+
+        <div class="menuMobileConteudo">
+            <a href="#home">Home</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#veiculos">Veiculos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </div>
+
+    </section>
+
+    <div id="home"></div>
+
+    <section class="inicioContainer">
+
+        <div class="inicioConteudo">
+            <h1 class="Inicioh1">ENCONTRE SEU CARRO</h1>
+
+            <img class="homeImg" src="img/homecar2.png" alt="">
+        </div>
+
+    </section>
+
+    <section class="loginContainer" style="display: none;">
+
+        <div class="loginConteudo">
+            <div class="headerLogin">
+                <h1>Login</h1>
+                <span class="fecharLogin">X</span>
+            </div>
+
+            <form>
+                <input type="email" id="email" placeholder="emplo@exemplo.com" required>
+                <input type="password" id="password" placeholder="digite sua senha" required>
+                <p>Esqueceu a senha?<a href="#">Clique Aqui</a></p>
+                <button type="submit" class="loginBtn">login</button>
+            </form>
+            <p>Registre-se <a href="#">aqui</a></p>
+        </div>
+
+    </section>
+
+    <div id="galeria"></div>
+
+    <section class="galleryContainer">
+        <h1>Galeria</h1>
+        <div class="galleryConteudo">
+
+            <div class="cards">
+                <img src="img/gallery1.png">
+            </div>
+
+            <div class="cards">
+                <img src="img/gallery2.jpg">
+            </div>
+
+            <div class="cards">
+                <img class="gallery3" src="img/gallery3.jpg">
+
+            </div>
+
+            <div class="cards">
+                <img src="img/gallery4.jpg">
+
+            </div>
+
+            <div class="cards">
+                <img src="img/gallery5.jpg">
+            </div>
+
+            <div class="cards">
+                <img src="img/gallery6.jpg">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div id="veiculos"></div>
+
+    <section class="containerPopularVeiculos">
+        <h1>Veiculos Popular</h1>
+
+        <div class="botao-carrosel">
+            <button class="carousel-prev">&lt;</button>
+            <button class="carousel-next">&gt;</button>
+        </div>
+        <div class="conteudoPopularVeiculos">
+
+
+            <div class="cardsPopularVeiculos">
+                <img src="img/vehicle-1.png">
+
+                <h2>Novo Modelo</h2>
+
+                <span class="priceContainer"><span class="price">Preço</span> R$500.000</span>
+
+                <div class="descricao">
+                    <span><span>new </span><span class="bolinha"></span> 2021</span>
+                </div>
+
+                <button class="compraVeiculo">Iniciar Compra</button>
+            </div>
+
+
+
+            <div class="cardsPopularVeiculos">
+                <img src="img/vehicle-2.png">
+
+                <h2>Novo Modelo</h2>
+
+                <span class="priceContainer"><span class="price">Preço</span> R$300.000</span>
+
+                <div class="descricao">
+                    <span><span>new </span><span class="bolinha"></span> 2021</span>
+                </div>
+
+                <button class="compraVeiculo">Iniciar Compra</button>
+            </div>
+
+
+            <div class="cardsPopularVeiculos">
+                <img src="img/vehicle-3.png">
+
+                <h2>Novo Modelo</h2>
+
+                <span class="priceContainer"><span class="price">Preço</span> R$750.000</span>
+
+                <div class="descricao">
+                    <span><span>new </span><span class="bolinha"></span> 2021</span>
+                </div>
+
+                <button class="compraVeiculo">Iniciar Compra</button>
+            </div>
+
+
+            <div class="cardsPopularVeiculos">
+                <img src="img/vehicle-4.png">
+
+                <h2>Novo Modelo</h2>
+
+                <span class="priceContainer"><span class="price">Preço</span> R$1.200.000</span>
+
+                <div class="descricao">
+                    <span><span>new </span><span class="bolinha"></span> 2021</span>
+                </div>
+
+                <button class="compraVeiculo">Iniciar Compra</button>
+            </div>
+
+
+            <div class="cardsPopularVeiculos">
+                <img src="img/vehicle-5.png">
+
+                <h2>Novo Modelo</h2>
+
+                <span class="priceContainer"><span class="price">Preço</span> R$950.000</span>
+
+                <div class="descricao">
+                    <span><span>new </span><span class="bolinha"></span> 2021</span>
+                </div>
+
+                <button class="compraVeiculo">Iniciar Compra</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="servicos"></div>
+
+    <section class="outrosServicosContainer">
+        <h1>Outros Serviços</h1>
+        <div class="outrosServicosConteudo">
+
+            <div class="cardsServicos">
+                <h2>Venda de carros</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis adipisci sit
+                    praesentium labore autem tempora nesciunt alias? Tempore veniam </p>
+                <button class="conhecer">Conhecer</button>
+            </div>
+
+            <div class="cardsServicos">
+                <h2>Reparação de peças</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis adipisci sit
+                    praesentium labore autem tempora nesciunt alias? Tempore veniam </p>
+                <button class="conhecer">Conhecer</button>
+            </div>
+
+            <div class="cardsServicos">
+                <h2>Seguro de carro</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis adipisci sit
+                    praesentium labore autem tempora nesciunt alias? Tempore veniam </p>
+                <button class="conhecer">Conhecer</button>
+            </div>
+
+            <div class="cardsServicos">
+                <h2>Substituição de bateria</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis adipisci sit
+                    praesentium labore autem tempora nesciunt alias? Tempore veniam </p>
+                <button class="conhecer">Conhecer</button>
+            </div>
+
+            <div class="cardsServicos">
+                <h2>Troca de óleo</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis adipisci sit
+                    praesentium labore autem tempora nesciunt alias? Tempore veniam </p>
+                <button class="conhecer">Conhecer</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="contato"></div>
+
+    <section class="contatContainer">
+        <h1>Contato</h1>
+
+        <div class="contatConteudo">
+
+            <div class="maps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7309.673860048137!2d-46.63866862229003!3d-23.646010299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5adda4c3cb95%3A0x31916ce58f719167!2sS%C3%A3o%20Paulo%20Expo!5e0!3m2!1spt-BR!2sbr!4v1687981912829!5m2!1spt-BR!2sbr"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="form">
+                <h2>Preencha Formulario</h2>
+                <form>
+                    <input type="text" placeholder="Nome" required>
+                    <input type="text" placeholder="Email" required>
+                    <textarea id="textarea" cols="30" rows="10" placeholder="Qual sua mensagem" required></textarea>
+
+                    <button>Enviar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section><br><br><br><br>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

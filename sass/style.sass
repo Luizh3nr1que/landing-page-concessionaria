@@ -1,0 +1,492 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+body
+    width: 100%
+    height: 100vh
+    background-color: #f6f6f6
+
+html
+    scroll-behavior: smooth
+
+//Inicio Header
+header
+    @include mixins.flex-center
+    width: 100%
+    justify-content: space-around
+    position: fixed
+    top: 0
+    height: 70px
+    z-index: 99
+    background-color: #ffffff
+
+    h1
+        color: variables.$secondary-color
+        font-weight: 500
+    span
+        color: variables.$primary-color
+
+    nav
+        display: flex
+        gap: 30px
+
+        a
+            text-decoration: none
+            color: variables.$secondary-color
+            font-size: 18px
+
+            &:hover
+                color: variables.$primary-color
+
+    .menuMobile
+        display: none
+        font-size: 30px
+        color: variables.$secondary-color
+
+    .login
+        width: 120px
+        height: 40px
+        border: none
+        background: variables.$secondary-color
+        color: variables.$white
+        font-weight: 500
+        border-radius: 7px
+        cursor: pointer
+        transition: .3s
+
+        &:hover
+            transition: .3s
+            background-color: variables.$primary-color
+
+//conteudo Menu Mobile
+.MobileContainer
+    display: none
+    height: 100%
+    position: fixed
+    top: 0
+    width: 35%
+    z-index: 999
+    background-color: variables.$white
+
+    .fecharMenu
+        position: absolute
+        top: 10px
+        right: 10px
+        font-size: 35px
+        color: variables.$secondary-color
+
+    .menuMobileConteudo
+        margin-top: 110px
+        @include mixins.flex-center
+        flex-direction: column
+        gap: 35px
+
+        a
+            color: variables.$secondary-color
+            text-decoration: none
+            font-size: 20px
+
+.abrirMenuMobile
+    @include mixins.animacaoAbrirMenuMobile
+    animation: slideAbrirMenu .3s linear forwards
+
+.fecharMenuMobile
+    @include mixins.animacaoFecharMenuMobile
+    animation: slideFecharMenu .3s linear forwards
+
+//Conteudo Inicio
+.inicioContainer
+    width: 100%
+
+    .inicioConteudo
+        width: 100%
+        max-width: 75em
+        margin: 130px auto
+        text-align: center
+
+        h1
+            font-size: 6rem
+            color: variables.$primary-color
+    img
+        width: 80%
+
+//Tela de login escondida
+.loginContainer
+    @include mixins.animacaoLogin
+    animation: slide 0.4s linear forwards
+
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 9999
+    pointer-events: auto
+    backdrop-filter: blur(8px)
+
+    .loginConteudo
+        display: flex
+        flex-direction: column
+        z-index: 999
+        opacity: 1
+        position: absolute
+        border-radius: 20px
+        background-color: white
+        width: 400px
+        height: 400px
+        padding: 30px
+        text-align: center
+
+        .headerLogin
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+        .headerLogin h1
+            font-size: 30px
+
+        .headerLogin span
+            font-size: 25px
+            cursor: pointer
+
+            &:hover
+                color: #fb4040
+
+        input
+            height: 50px
+            width: 100%
+            border-radius: 10px
+            margin-bottom: 10px
+            padding: 0px 0px 0px 10px
+            outline: none
+            border: none
+            background-color: #f0f0f0
+
+        #email
+            margin-bottom: 20px
+
+        p
+            margin: 20px
+
+            a
+                color: variables.$primary-color
+
+        .loginBtn
+            background-color: variables.$secondary-color
+            height: 40px
+            width: 100%
+            border: none
+            color: variables.$white
+            font-weight: 500
+            text-decoration: none
+            font-size: 20px
+            cursor: pointer
+
+            &:hover
+                background-color: variables.$hoverBtn-color
+
+//Galleria conteudo
+.galleryContainer
+    width: 100%
+    text-align: center
+
+    h1
+        color: variables.$primary-color
+        font-size: 3.8rem
+
+    .galleryConteudo
+        width: 100%
+        max-width: 75em
+        margin: 0 auto
+        @include mixins.flex-wrap
+        justify-content: center
+        gap: 20px
+        padding: 50px
+
+        .cards
+            width: 250px
+            height: 200px
+            background-color: variables.$primary-color
+            border-radius: 10px
+            @include mixins.flex-center
+
+            img
+                width: 230px
+                transform: rotate(-20deg)
+                transition: .3s
+                border-radius: 30px
+
+                &:hover
+                    transition: .3s
+                    transform: rotate(0)
+            .gallery3
+                width: 200px
+
+//popular veioculos
+.containerPopularVeiculos
+    width: 100%
+    text-align: center
+    margin-top: 50px
+    position: relative
+
+    h1
+        color: variables.$primary-color
+        font-size: 3.8rem
+
+    .conteudoPopularVeiculos
+        width: 100%
+        max-width: 75em
+        margin: 0 auto
+        padding: 20px
+        display: flex
+        gap: 30px
+        overflow-x: hidden
+
+        .cardsPopularVeiculos
+            width: 25em
+            height: 25em
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 10px
+            background-color: #fff
+            border-radius: 10px
+            box-shadow: 5px 5px 5px #00000044
+            transition: .4s
+
+            &:hover
+                transition: .4s
+                transform: translateY(-10px)
+
+            img
+                width: 350px
+
+            h2
+                font-size: 2em
+                color: variables.$secondary-color
+
+            .price
+                font-size: 17px
+
+            .priceContainer
+                font-size: 1.5em
+                color: variables.$primary-color
+
+            .descricao
+                display: flex
+                gap: 10px
+                align-items: center
+
+                .bolinha
+                    border-radius: 50%
+                    width: 10px
+                    height: 10px
+                    content: ""
+                    display: inline-block
+                    background-color: variables.$primary-color
+
+            .compraVeiculo
+                width: 210px
+                height: 40px
+                border: none
+                padding: 5px
+                color: variables.$white
+                background-color: variables.$secondary-color
+                cursor: pointer
+                border-radius: 6px
+
+                &:hover
+                    background-color: variables.$hoverBtn-color
+
+    .botao-carrosel
+        max-width: 75em
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+
+        button
+            width: 50px
+            height: 50px
+            border: none
+            cursor: pointer
+            background-color: variables.$white
+            font-size: 30px
+            font-weight: bold
+            border-radius: 10px
+
+            &:hover
+                background-color: variables.$hoverBtn-color
+
+//outros serviços
+.outrosServicosContainer
+    width: 100%
+    text-align: center
+    margin-top: 50px
+
+    h1
+        color: variables.$primary-color
+        font-size: 3.8rem
+
+    .outrosServicosConteudo
+        width: 100%
+        max-width: 75em
+        margin: 0 auto
+        @include mixins.flex-wrap
+        justify-content: center
+        gap: 20px
+        padding: 50px
+
+        .cardsServicos
+            width: 330px
+            height: 280px
+            background-color: variables.$secondary-color
+            color: variables.$white
+            border-radius: 10px
+            @include mixins.flex-center
+            flex-direction: column
+            gap: 30px
+            transition: .3s
+
+            &:hover
+                transition: .3s
+                background-color: #767676
+
+            button
+                background: variables.$primary-color
+                border: none
+                height: 40px
+                width: 200px
+                color: variables.$white
+                font-weight: 500
+                font-size: 19px
+                border-radius: 10px
+                cursor: pointer
+
+//contact
+.contatContainer
+    width: 100%
+    text-align: center
+    margin-top: 50px
+
+    h1
+        color: variables.$primary-color
+        font-size: 3.8rem
+
+    .contatConteudo
+        width: 100%
+        max-width: 75em
+        margin: 0 auto
+        @include mixins.flex-wrap
+        justify-content: center
+        background-color: variables.$primary-color
+        padding: 20px
+
+        .maps
+            border-right: 1px solid #a9a9a9
+            width: 580px
+            height: 450px
+
+        .form
+            width: 580px
+            height: 450px
+            padding: 30px
+
+            h2
+                margin-bottom: 20px
+
+            form
+                @include mixins.flex-center
+                flex-direction: column
+
+                input
+                    padding: 2px 2px 2px 10px
+                    margin-bottom: 20px
+                    width: 100%
+                    height: 40px
+                    outline: none
+                    border: none
+                    border-radius: 10px
+
+                textarea
+                    border: none
+                    outline: none
+                    border-radius: 10px
+                    padding: 15px 5px 2px 10px
+                    width: 100%
+                    height: 150px
+
+                button
+                    width: 40%
+                    background-color: variables.$secondary-color
+                    color: variables.$white
+                    margin-top: 10px
+                    border: none
+                    height: 30px
+                    cursor: pointer
+                    border-radius: 6px
+
+                    &:hover
+                        background-color: variables.$hoverBtn-color
+
+//Load CSS
+.fundoLoad
+    width: 100vw
+    height: 100vh
+    background-color: rgb(255, 255, 255)
+    z-index: 1900
+    position: fixed
+    top: 0
+    left: 0
+
+.loader
+    display: flex
+    width: 220px
+    height: 8px
+    border-radius: 40px
+    background-color: #f5f5f5
+    position: relative
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    overflow: hidden
+
+.fundoLoad p
+    position: absolute
+    left: 50%
+    top: 53%
+    transform: translate(-50%, -50%)
+    overflow: hidden
+    color: white
+    letter-spacing: 3px
+    color: #000
+
+.loader::before
+    content: ""
+    position: absolute
+    top: 0
+    left: -50px
+    width: 150%
+    height: 100%
+    background-color: #1139ba
+    border-radius: inherit
+    transform: scaleX(0)
+    transform-origin: left
+    animation: load 1.2s infinite
+
+@keyframes load
+    50%
+        transform: scaleX(1)
+
+    100%
+        transform: scaleX(0)
+        transform-origin: right
