@@ -72,7 +72,7 @@ header .login:hover {
   height: 100%;
   position: fixed;
   top: 0;
-  width: 35%;
+  width: 14em;
   z-index: 999;
   background-color: #fff;
 }
@@ -110,7 +110,7 @@ header .login:hover {
 }
 
 .fecharMenuMobile {
-  animation: slideFecharMenu 0.3s linear forwards;
+  animation: slideFecharMenu 0.2s linear forwards;
 }
 @keyframes slideFecharMenu {
   from {
