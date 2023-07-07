@@ -528,7 +528,7 @@ header .login:hover {
   transform: translate(-50%, -50%);
   overflow: hidden;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   color: #000;
 }
 
