@@ -5,6 +5,7 @@ const fecharLogin = document.querySelector('.fecharLogin');
 buttonAbrirLogin.addEventListener('click', () => {
     paginaLogin.classList.remove('AnimationfecharLogin');
     paginaLogin.classList.add('AnimationabrirLogin');
+    document.body.style.overflow = 'hidden';
     paginaLogin.style.display = 'flex';
 })
 
@@ -14,6 +15,7 @@ fecharLogin.addEventListener('click', () => {
     setTimeout(() => {
         paginaLogin.style.display = 'none';
     }, 400)
+    document.body.style.overflow = 'scroll';
 })
 
 
