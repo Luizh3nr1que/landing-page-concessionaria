@@ -138,8 +138,31 @@ header .login:hover {
   width: 80%;
 }
 
-.loginContainer {
+.AnimationfecharLogin {
+  animation: slideFechar 0.4s linear forwards;
+}
+@keyframes slideFechar {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -100%;
+  }
+}
+
+.AnimationabrirLogin {
   animation: slide 0.4s linear forwards;
+}
+@keyframes slide {
+  from {
+    margin-top: -100%;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+.loginContainer {
   position: fixed;
   top: 0;
   left: 0;
@@ -152,14 +175,6 @@ header .login:hover {
   z-index: 9999;
   pointer-events: auto;
   backdrop-filter: blur(8px);
-}
-@keyframes slide {
-  from {
-    margin-top: -100%;
-  }
-  to {
-    margin-top: 0px;
-  }
 }
 .loginContainer .loginConteudo {
   display: flex;
@@ -206,6 +221,7 @@ header .login:hover {
   margin: 20px;
 }
 .loginContainer .loginConteudo p a {
+  text-decoration: none;
   color: #f9a600;
 }
 .loginContainer .loginConteudo .loginBtn {
@@ -359,6 +375,7 @@ header .login:hover {
   border-radius: 10px;
 }
 .containerPopularVeiculos .botao-carrosel button:hover {
+  color: #fff;
   background-color: #0b2888;
 }
 

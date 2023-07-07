@@ -3,11 +3,17 @@ const paginaLogin = document.querySelector('.loginContainer');
 const fecharLogin = document.querySelector('.fecharLogin');
 
 buttonAbrirLogin.addEventListener('click', () => {
+    paginaLogin.classList.remove('AnimationfecharLogin');
+    paginaLogin.classList.add('AnimationabrirLogin');
     paginaLogin.style.display = 'flex';
 })
 
 fecharLogin.addEventListener('click', () => {
-    paginaLogin.style.display = 'none';
+    paginaLogin.classList.remove('AnimationabrirLogin');
+    paginaLogin.classList.add('AnimationfecharLogin');
+    setTimeout(() => {
+        paginaLogin.style.display = 'none';
+    }, 400)
 })
 
 

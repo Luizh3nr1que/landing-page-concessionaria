@@ -117,10 +117,15 @@ header
         width: 80%
 
 //Tela de login escondida
-.loginContainer
+.AnimationfecharLogin
+    @include mixins.animacaoFecharLogin
+    animation: slideFechar 0.4s linear forwards
+
+.AnimationabrirLogin
     @include mixins.animacaoLogin
     animation: slide 0.4s linear forwards
 
+.loginContainer
     position: fixed
     top: 0
     left: 0
@@ -179,6 +184,7 @@ header
             margin: 20px
 
             a
+                text-decoration: none
                 color: variables.$primary-color
 
         .loginBtn
@@ -327,6 +333,7 @@ header
             border-radius: 10px
 
             &:hover
+                color: variables.$white
                 background-color: variables.$hoverBtn-color
 
 //outros serviços
