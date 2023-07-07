@@ -139,7 +139,7 @@ header .login:hover {
 }
 
 .AnimationfecharLogin {
-  animation: slideFechar 0.4s linear forwards;
+  animation: slideFechar 0.3s linear forwards;
 }
 @keyframes slideFechar {
   from {
@@ -151,7 +151,7 @@ header .login:hover {
 }
 
 .AnimationabrirLogin {
-  animation: slide 0.4s linear forwards;
+  animation: slide 0.3s linear forwards;
 }
 @keyframes slide {
   from {

@@ -14,7 +14,7 @@ fecharLogin.addEventListener('click', () => {
     paginaLogin.classList.add('AnimationfecharLogin');
     setTimeout(() => {
         paginaLogin.style.display = 'none';
-    }, 400)
+    }, 300)
     document.body.style.overflow = 'scroll';
 })
 
